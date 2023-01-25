@@ -8,7 +8,7 @@ Item {
     property var session: sessionPanel.session
     property var inputHeight: Screen.height * config.LoginScale * 0.25
     property var inputWidth: Screen.width * config.LoginScale
-    
+
     Column {
         spacing: 8
 
@@ -30,11 +30,12 @@ Item {
         spacing: 8
 
         width: inputWidth
-        anchors {
-            bottom: parent.bottom
-            right: parent.right
-        }
-    
+        // anchors {
+        //     bottom: parent.bottom
+        //     right: parent.right
+        // }
+        anchors.centerIn: parent
+
         UserPanel {
             id: userPanel
         }
@@ -50,7 +51,7 @@ Item {
 
         Button {
             id: loginButton
-            
+
             height: inputHeight
             width: parent.width
 
@@ -72,7 +73,7 @@ Item {
                 opacity: 0.5
                 text: config.LoginButtonText
             }
-        
+
             background: Rectangle {
                 id: buttonBackground
 
@@ -154,7 +155,7 @@ Item {
             }
         }
     }
-    
+
     Connections {
         target: sddm
         function onLoginSucceeded() {

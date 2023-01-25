@@ -76,7 +76,7 @@ Item {
         icon.height: height * 0.6
         icon.width: width * 0.6
         icon.color: config.SessionIconColor
-        
+
         background: Rectangle {
             id: sessionButtonBg
 
@@ -133,10 +133,10 @@ Item {
         padding: 15
 
         background: Rectangle {
-            radius: config.CornerRadius * 1.8
+            radius: config.CornerRadius * 1.4
             color: config.PopupBgColor
         }
-        
+
         contentItem: ListView {
             id: sessionList
 

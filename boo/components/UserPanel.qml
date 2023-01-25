@@ -14,7 +14,7 @@ Column {
         model: userModel
         delegate: ItemDelegate {
             id: userEntry
-                
+
             height: inputHeight
             width: parent.width
             highlighted: userList.currentIndex == index
@@ -74,7 +74,7 @@ Column {
         padding: 15
 
         background: Rectangle {
-            radius: config.CornerRadius * 1.8
+            radius: config.CornerRadius * 1.4
             color: config.PopupBgColor
         }
 
@@ -126,8 +126,8 @@ Column {
             id: pictureBorder
 
             anchors.centerIn: userPicture
-            height: inputWidth / 1.5 + (border.width * 2)
-            width: inputWidth / 1.5 + (border.width * 2)
+            height: inputWidth / 2.5 + (border.width * 2)
+            width: inputWidth / 2.5 + (border.width * 2)
             radius: height / 2
             border.width: config.UserPictureBorderWidth
             border.color: config.UserPictureBorderColor
@@ -197,12 +197,12 @@ Column {
             id: userPicture
             source: ""
 
-            height: inputWidth / 1.5
-            width: inputWidth / 1.5
+            height: inputWidth / 3
+            width: inputWidth / 3
             anchors.horizontalCenter: parent.horizontalCenter
 
             fillMode: Image.PreserveAspectCrop
-            layer.enabled: true
+            layer.enabled: false
             layer.effect: OpacityMask {
                 maskSource: mask
             }

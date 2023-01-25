@@ -28,7 +28,7 @@ Item {
 
         background: Rectangle {
             id: powerButtonBg
-            
+
             color: config.PowerButtonColor
             radius: config.CornerRadius
         }
@@ -76,19 +76,19 @@ Item {
     Popup {
         id: powerPopup
 
-        height: inputHeight * 2.2 + padding * 2
+        height: inputHeight * 1.4 + padding * 2
         x: powerButton.width + powerList.spacing
         y: -height + powerButton.height
         padding: 15
 
         background: Rectangle {
-            radius: config.CornerRadius * 1.8
+            radius: config.CornerRadius * 1.4
             color: config.PopupBgColor
         }
 
         contentItem: ListView {
             id: powerList
-            
+
             implicitWidth: contentWidth
             spacing: 8
             orientation: Qt.Horizontal
@@ -98,14 +98,14 @@ Item {
             delegate: ItemDelegate {
                 id: powerEntry
 
-                height: inputHeight * 2.2
-                width: inputHeight * 2.2
+                height: inputHeight * 1.4
+                width: inputHeight * 1.4
                 display: AbstractButton.TextUnderIcon
-               
+
                 contentItem: Item {
                     Image {
                         id: powerIcon
-                    
+
                         anchors.centerIn: parent
                         source: index == 0 ? Qt.resolvedUrl("../icons/sleep.svg") : (index == 1 ? Qt.resolvedUrl("../icons/restart.svg") : Qt.resolvedUrl("../icons/power.svg"))
                         sourceSize: Qt.size(powerEntry.width * 0.5, powerEntry.height * 0.5)
@@ -133,7 +133,7 @@ Item {
                         opacity: 0
                     }
                 }
-                
+
                 background: Rectangle {
                     id: powerEntryBg
 
